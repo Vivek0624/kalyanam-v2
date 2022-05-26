@@ -1,0 +1,415 @@
+.header {
+  //   width: 100%;
+  min-height: 70vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 6rem;
+
+  // background-image: linear-gradient(
+  //     To right bottom,
+  //     rgba($color-black, 0.7),
+  //     rgba($color-grey-light-3, 0.6)
+  //   ),
+  //   url(../img/img5.jpg);
+
+  animation: animate 16s ease-in-out infinite;
+  position: relative;
+  // animation-fill-mode: backwards;
+  // animation: animate 16s ease-in-out infinite;
+
+  &--outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(
+      To right bottom,
+      rgba($color-black, 0.7),
+      rgba($color-grey-light-3, 0.6)
+    );
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 2.1rem;
+    left: 5rem;
+    z-index: 1;
+
+    @include response(tab-port) {
+      // width  600px
+      top: 3.3rem;
+      left: 1.6rem;
+    }
+  }
+
+  &__logo {
+    height: 12rem;
+    // height: 100%;
+    cursor: pointer;
+
+    @include response(tab-port) {
+      // width  600px
+      height: 9rem;
+      margin-left: 1.3rem;
+    }
+    @include response(phone) {
+      // width  600px
+      height: 11.5rem;
+      margin-left: 1.3rem;
+    }
+  }
+
+  &__text-box {
+    color: $color-white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+// WhatsApp
+
+// .mainSocilaNav {
+//   position: relative;
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   @include response(phone) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+.whatsappNav {
+  background: green;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 6%;
+  right: 4%;
+  cursor: pointer;
+  // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.452);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.452);
+  z-index: 82;
+
+  animation-name: moveInBotton;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @include response(tab-port) {
+    height: 5rem;
+    width: 5rem;
+    bottom: 3%;
+  }
+
+  @include response(phone) {
+    height: 5rem;
+    width: 5rem;
+    bottom: 3%;
+  }
+
+  & a {
+    color: #fff;
+    font-size: $default-font-size;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: border-bottom 10s ease-in-out;
+
+    // margin-right: 1rem;
+  }
+
+  & i {
+    // color: white;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    font-size: 4rem;
+
+    text-align: center;
+    // background-color: green;
+    color: #fff;
+    border-radius: 50%;
+
+    @include response(tab-port) {
+      font-size: 4.2rem;
+    }
+
+    @include response(phone) {
+      font-size: 4.2rem;
+    }
+  }
+
+  & a:hover {
+    // border-bottom: 1px solid white;
+    border-width: 1px;
+  }
+}
+
+// Instagram Main Navigation
+.instagramNav {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+
+  border-radius: 20%;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 6%;
+  right: 9%;
+  cursor: pointer;
+  // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.452);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.452);
+  z-index: 82;
+
+  animation-name: moveInBotton;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  @include response(tab-port) {
+    // height: 5rem;
+    // width: 5rem;
+
+    bottom: 12%;
+    right: 4%;
+  }
+
+  @include response(phone) {
+    //   height: 5rem;
+    // width: 5rem;
+
+    bottom: 11%;
+    right: 4%;
+  }
+
+  & a {
+    color: #fff;
+    transition: border-bottom 10s ease-in-out;
+  }
+
+  & i {
+    font-size: 4rem;
+    text-align: center;
+    // margin-left: 0.2rem;
+    color: #fff;
+    border-radius: 50%;
+
+    @include response(tab-port) {
+      // font-size: 3.7rem;
+    }
+
+    @include response(phone) {
+      // font-size: 2.9rem;
+    }
+  }
+
+  & a:hover {
+    border-width: 1px;
+  }
+}
+
+// Section Call to Action (CTA)
+
+.cta {
+  margin: 8rem auto;
+  width: 80%;
+  background-image: linear-gradient(
+      To right bottom,
+      rgba($color-black, 0.7),
+      rgba($color-grey-light-3, 0.6)
+    ),
+    url(../img/kalyanam/cta/IMG1.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8rem 0;
+
+  --border-width: 3px;
+
+  position: relative;
+
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 85%, 66%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(89, 85%, 66%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+  }
+}
+
+.cta h1 {
+  color: $color-white;
+  margin-bottom: 4rem;
+  font-size: 3.5rem;
+  // width: 100%;
+  padding: 0;
+}
+
+// QUICK NAVIGATION Home page
+
+.quickNavigation {
+  z-index: 80;
+  position: absolute;
+  right: 40px;
+  bottom: 40%;
+  display: flex;
+
+  flex-direction: column;
+  transition: 0.5s ease;
+
+  @include response(tab-land) {
+    right: 30px;
+  }
+
+  @include response(phone) {
+    right: 25px;
+  }
+}
+
+.quickNavigation a {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.quickNavigation a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.quickNavigation a:hover {
+  transform: scale(1.3);
+  color: $color-primary;
+}
+
+// QUICK NAVIGATION About page
+
+.quickNavigationAbout {
+  z-index: 80;
+  position: absolute;
+  right: 40px;
+  bottom: 40%;
+  display: flex;
+
+  flex-direction: column;
+  transition: 0.5s ease;
+
+  @include response(tab-land) {
+    right: 30px;
+  }
+
+  @include response(phone) {
+    right: 25px;
+  }
+}
+
+.quickNavigationAbout a {
+  color: #333;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+
+.quickNavigationAbout a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.quickNavigationAbout a:hover {
+  transform: scale(1.3);
+  color: $color-primary;
+}
+
+// Map IFRAME
+.main-mapMain {
+  margin: 8rem;
+  border: 4px solid red;
+
+  @include response(tab-land) {
+    margin: 6rem;
+    // border: 4px solid red;
+    border: none;
+  }
+
+  @include response(tab-port) {
+    margin: 4rem;
+    // border: 3px solid red;
+    border: none;
+  }
+
+  @include response(phone) {
+    margin: 2rem;
+    // border: 2px solid red;
+    border: none;
+  }
+}
+
+.main-mapMain iframe {
+  width: 1180px;
+  height: 480px;
+
+  @include response(tab-land) {
+    width: 950px;
+    height: 480px;
+  }
+
+  @include response(tab-port) {
+    width: 575px;
+    height: 480px;
+  }
+
+  @include response(phone) {
+    width: 330px;
+    height: 480px;
+  }
+}
